@@ -6,7 +6,11 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-
+/**
+ * 最简单的server
+ * @author ludonghua
+ *
+ */
 public class SimplestServer {
 	private int port = 5000;
 	private ServerSocket serverSocket;
@@ -32,7 +36,7 @@ public class SimplestServer {
 				while((msg=br.readLine())!=null){
 					System.out.println(msg);
 					pw.println("server "+ msg);
-					if(msg.equals("bye")){
+					if(msg.equals("close server")){
 						break;
 					}
 				}
@@ -45,6 +49,7 @@ public class SimplestServer {
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
+					System.exit(1);
 				}
 			}
 		}

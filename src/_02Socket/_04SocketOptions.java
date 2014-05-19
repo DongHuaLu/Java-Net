@@ -3,7 +3,11 @@ package _02Socket;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
+/**
+ * socket的选项
+ * @author ludonghua
+ *
+ */
 public class _04SocketOptions {
 	private String host = "localhost";
 	private int port = 8000;

@@ -1,13 +1,17 @@
 package _02Socket;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+/**
+ * 
+ * 通过socket模拟http连接
+ */
 
 public class _03HttpClient {
 	private String host = "news.qq.com";
@@ -35,7 +39,7 @@ public class _03HttpClient {
 		InputStream socketIn = socket.getInputStream();
 //		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		BufferedReader br = new BufferedReader(new InputStreamReader(socketIn));
-		byte[] buff = new byte[1024];
+//		byte[] buff = new byte[1024];
 //		int len = -1;
 		String data = null;
 		while((data = br.readLine())!=null){

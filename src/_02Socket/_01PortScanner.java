@@ -1,16 +1,19 @@
 package _02Socket;
 
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
+/**
+ * 端口扫描器
+ * @author ludonghua
+ *
+ */
 public class _01PortScanner {
 
 	
 	public static void main(String[] args) {
-		String host = "192.168.20.";
+		String host = "192.168.10.";
 		_01PortScanner s = new _01PortScanner();
 		for(int j=1;j<255;j++){
 			String r = host+j;
@@ -25,6 +28,7 @@ public class _01PortScanner {
 		try {
 			socket = new Socket();
 			InetSocketAddress address = new InetSocketAddress(host, port);
+			// 连接此端口,连上了打印
 			socket.connect(address, 500);
 			System.out.println("This is a server on " + host + ":" + port);
 		} catch (UnknownHostException e) {

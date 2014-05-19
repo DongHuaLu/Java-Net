@@ -6,7 +6,11 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-
+/**
+ * 最简单的client
+ * @author ludonghua
+ *
+ */
 public class SimplestClient {
 	private String host = "127.0.0.1";
 	private int port = 5000;
@@ -45,6 +49,7 @@ public class SimplestClient {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				System.exit(1);
 			}
 		}
 	}

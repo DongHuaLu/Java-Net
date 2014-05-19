@@ -1,7 +1,10 @@
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
-
+/**
+ * 根据域名获取对应的ip地址
+ * @author ludonghua
+ *
+ */
 public class InetAddressTest {
 	public static void main(String[] args) {
 		try {
